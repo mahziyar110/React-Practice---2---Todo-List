@@ -20,16 +20,15 @@ function Task(props) {
 			(
 				<>
 					<li>
-					<textarea className="editTask" onChange={(ev) => {
-						setNewTask(ev.target.value);
-					}} value={newTask}></textarea>
-					{
-						newTask !== "" &&
+						<textarea className="editTask" onChange={(ev) => {
+							setNewTask(ev.target.value);
+						}} value={newTask}></textarea>
+
 						<button className="saveTask" onClick={() => {
 							setEditMode(false);
 							changeTask(newTask, index);
-						}}>Save</button>
-					}
+						}} disabled={newTask === ""}>Save</button>
+
 					</li>
 				</>
 			)
@@ -41,8 +40,8 @@ function App() {
 	const [taskArray, setTaskArray] = useState([]);
 
 	function changeTask(newTask, index) {
-		const newArr = taskArray.map((el,i) => {
-			if(i === index) {
+		const newArr = taskArray.map((el, i) => {
+			if (i === index) {
 				return newTask;
 			}
 			return el;
