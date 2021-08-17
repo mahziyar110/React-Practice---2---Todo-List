@@ -1,16 +1,25 @@
 h1 {
     color: #27aedb;
     text-align: center;
-    }
-    
+} 
 
-button{
+button {
     color: #27aedb;
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin: 2px 5px 2px 0px;
 }
 
-.bg-pink{
+textarea {
+    min-width: 100%;
+    font-size: 18px;
+}
+
+li {
+    font-size: 24px;
+}
+
+.bg-pink {
 	background-color:pink;
 }
